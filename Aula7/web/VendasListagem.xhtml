@@ -1,0 +1,104 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"/>
+        <title>LISTA DE VENDAS</title>
+    </h:head>
+    <h:body>
+        <center>
+        <h:form>
+            <div class="container p-3 my-3 bg-dark text-white">
+                <h1>LISTA DE VENDAS CADASTRADOS</h1>
+            </div>
+            
+            <h:dataTable style="text-align: center;" width="1140px;"
+                         var="um"
+                         value="#{vendasController.vendas}"
+                         border="2">
+                
+                <h:column>
+                    <f:facet name="header">
+                         <h:outputLabel value="CODIGO"/>
+                    </f:facet>
+                    
+                    <h:outputLabel value="#{um.idvendas}"/>                    
+                </h:column>
+                
+                <h:column>
+                    <f:facet name="header">
+                        <h:outputLabel value="VENDEDOR"/>
+                    </f:facet>
+                    
+                    <h:outputLabel value="#{um.vendedor.nome}"/>                    
+                </h:column>
+                
+                <h:column>
+                    <f:facet name="header">
+                        <h:outputLabel value="PRODUTO"/>
+                    </f:facet>
+                    
+                    <h:outputLabel value="#{um.produto.nome}"/>                    
+                </h:column>
+                
+                <h:column>
+                    <f:facet name="header">
+                        <h:outputLabel value="PREÇO ORIGINAL"/>
+                    </f:facet>
+                    
+                    <h:outputLabel value="#{um.produto.preco}">
+                        
+                    </h:outputLabel>                   
+                </h:column>
+                
+                 <h:column>
+                    <f:facet name="header">
+                        <h:outputLabel value="VALOR VENDA"/>
+                    </f:facet>
+                    
+                     <h:outputLabel value="#{um.vlvenda}">
+                    </h:outputLabel>
+                     
+                </h:column>
+                
+                <h:column>
+                    <f:facet name="header">
+                        <h:outputLabel value="QUANTIDADE"/>
+                    </f:facet>
+                    
+                    <h:outputLabel value="#{um.quantidade}"/>                    
+                </h:column>
+                
+                <h:column>
+                    <f:facet name="header">
+                        <h:outputLabel value="AÇÃO"/>
+                    </f:facet>
+                    
+                    <h:commandLink value="Detalhe" action="vaiParaVendedorDetalhe">
+                        <f:setPropertyActionListener target="#{vendedorController.vendedor}" value="#{umVend}" />
+                    </h:commandLink>
+                    
+                    <h:outputLabel value="⠀|⠀"/>
+                    <h:commandLink value="Editar" action="vaiParaVendedorEditar">
+                        <f:setPropertyActionListener target="#{vendedorController.vendedor}" value="#{umVend}" />
+                    </h:commandLink>
+                    
+                    
+                    <h:outputLabel value="⠀|⠀"/>
+                    
+                    <h:commandLink value="Deletar" action="#{vendedorController.finalizaDelecao()}">
+                        <f:setPropertyActionListener target="#{vendedorController.vendedor}" value="#{umVend}"/>
+                    </h:commandLink>
+                </h:column>
+            </h:dataTable>
+            <br>
+            <button type="button" class="btn btn-light"><h:commandLink value="VOLTAR" action="voltaParaIndex"/></button>
+            <button type="button" class="btn btn-light"><h:commandLink value="CADASTRAR" style="width: 95%" action="#{vendasController.preparaInclusao()}" /></button>
+            </br>
+        </h:form>
+        </center>
+    </h:body>
+</html>
+

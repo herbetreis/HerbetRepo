@@ -1,5 +1,6 @@
 package frb.edu.br.controladores;
 
+import frb.edu.br.dominio.contratos.IVendedor;
 import frb.edu.br.dominio.entidades.VendedorDto;
 import frb.edu.br.infra.repositorios.VendedorRepositorio;
 import java.util.List;
@@ -9,7 +10,7 @@ public class VendedorController {
     private VendedorDto vendedor;
     private List<VendedorDto> vendedores = null;
     
-    private VendedorRepositorio vendedorRepositorio = new VendedorRepositorio();
+    private IVendedor vendedorRepositorio = new VendedorRepositorio();
     
     public VendedorController() {
     }
