@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"/>
+        
+        <style>
+            table, th, td {
+            text-align:center;
+            }
+        </style>
+        
+        <title>VENDEDOR EDITAR</title>
+    </h:head>
+    <h:body>
+        <center>
+        <h:form>
+            <div class="container p-3 my-3 bg-dark text-white">
+            <h1>VENDEDOR EDITAR</h1>
+            </div>
+            <table>
+                <tbody>
+                    <tr>
+                        <td> <h:outputLabel value="MATRICULA⠀"/> </td>
+                        <td> <h:outputLabel value="#{vendedorController.vendedor.idvendedor}"/> </td>
+                    </tr>
+                    <tr>
+                        <td> <h:outputLabel value="NOME⠀"/> </td>
+                        <td> <h:inputText value="#{vendedorController.vendedor.nome}" maxlength="240" size="80" />  </td>
+                    </tr>
+                    <tr>
+                        <td> <h:outputLabel value="COMISSÃO⠀"/> </td>
+                        <td> <h:inputText value="#{vendedorController.vendedor.comissao}" maxlength="240" size="80" /> </td>
+                    </tr>
+                </tbody>
+            </table>
+            <br/>
+            <button type="button" class="btn btn-light"><h:commandLink value="VOLTAR" style="width: 48%" action="voltaParaVendedorListagem" /></button>
+            <button type="button" class="btn btn-light"><h:commandLink value="GRAVAR" style="width: 48%" action="#{vendedorController.finalizaEdicao()}" /></button>
+            
+        </h:form>
+        </center>
+    </h:body>
+</html>
+
