@@ -47,6 +47,7 @@ public class PaisRepositorio extends DaoUtil implements IPais{
         try {
             ps = getPreparedStatement(sql);
             ps.setString(1, pais.getNome());
+            ps.setInt(2, pais.getIdpais());
             ret = ps.executeUpdate();
             ps.close();
                        
@@ -80,8 +81,8 @@ public class PaisRepositorio extends DaoUtil implements IPais{
     @Override
     public PaisDto getRegistroPorId(int id) {
         PaisDto pai = new PaisDto();
-        String sql = "SELECT idPais, nome, "; 
-        sql += " descricao FROM pais ";
+        String sql = "SELECT idPais, nome "; 
+        sql += " FROM pais ";
         sql += " WHERE idPais = ?";
         try {
             PreparedStatement ps = super.getPreparedStatement(sql);
@@ -105,8 +106,8 @@ public class PaisRepositorio extends DaoUtil implements IPais{
     @Override
     public List<PaisDto> getListaTodos() {
         List<PaisDto> paises = new LinkedList<PaisDto>();
-        String sql = "SELECT idPais, nome,"; 
-        sql += " descricao FROM pais ";
+        String sql = "SELECT idPais, nome"; 
+        sql += " FROM pais ";
         try {
             PreparedStatement ps = super.getPreparedStatement(sql);
             ResultSet rs = ps.executeQuery();

@@ -5,26 +5,26 @@
       xmlns:f="http://xmlns.jcp.org/jsf/core">
     <h:head>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"/>
-        <title>LISTA DE VENDEDORES</title>
+        <title>LISTA DE CIDADES</title>
     </h:head>
     <h:body>
         <center>
         <h:form>
             <div class="container p-3 my-3 bg-dark text-white">
-                <h1>LISTA DE VENDEDORES CADASTRADOS</h1>
+                <h1>LISTA DE CIDADES CADASTRADAS</h1>
             </div>
             
             <h:dataTable style="text-align: center;" width="1140px;"
-                         var="umVend"
-                         value="#{vendedorController.vendedores}"
+                         var="umCid"
+                         value="#{cidadeController.cidades}"
                          border="2">
                 
                 <h:column>
                     <f:facet name="header">
-                         <h:outputLabel value="MATRICULA"/>
+                         <h:outputLabel value="CODIGO"/>
                     </f:facet>
                     
-                    <h:outputLabel value="#{umVend.idvendedor}"/>                    
+                    <h:outputLabel value="#{umCid.idcidade}"/>                    
                 </h:column>
                 
                 <h:column>
@@ -32,17 +32,7 @@
                         <h:outputLabel value="NOME"/>
                     </f:facet>
                     
-                    <h:outputLabel value="#{umVend.nome}"/>                    
-                </h:column>
-                
-                <h:column>
-                    <f:facet name="header">
-                        <h:outputLabel value="COMISSÃO"/>
-                    </f:facet>
-                    
-                    <h:outputLabel value="#{umVend.comissao}">
-                        
-                    </h:outputLabel>                   
+                    <h:outputLabel value="#{umCid.nome}"/>                    
                 </h:column>
                 
                 <h:column>
@@ -50,26 +40,26 @@
                         <h:outputLabel value="AÇÃO"/>
                     </f:facet>
                     
-                    <h:commandLink value="Detalhe" action="vaiParaVendedorDetalhe">
-                        <f:setPropertyActionListener target="#{vendedorController.vendedor}" value="#{umVend}" />
+                    <h:commandLink value="Detalhe" action="vaiParaCidadeDetalhe">
+                        <f:setPropertyActionListener target="#{cidadeController.cidade}" value="#{umCid}" />
                     </h:commandLink>
                     
                     <h:outputLabel value="⠀|⠀"/>
-                    <h:commandLink value="Editar" action="vaiParaVendedorEditar">
-                        <f:setPropertyActionListener target="#{vendedorController.vendedor}" value="#{umVend}" />
+                    <h:commandLink value="Editar" action="vaiParaCidadeEditar">
+                        <f:setPropertyActionListener target="#{cidadeController.cidade}" value="#{umCid}" />
                     </h:commandLink>
                     
                     
                     <h:outputLabel value="⠀|⠀"/>
                     
-                    <h:commandLink value="Deletar" action="#{vendedorController.finalizaDelecao()}">
-                        <f:setPropertyActionListener target="#{vendedorController.vendedor}" value="#{umVend}"/>
+                    <h:commandLink value="Deletar" action="#{cidadeController.finalizaDelecao()}">
+                        <f:setPropertyActionListener target="#{cidadeController.cidade}" value="#{umCid}"/>
                     </h:commandLink>
                 </h:column>
             </h:dataTable>
             <br>
             <button type="button" class="btn btn-light"><h:commandLink value="VOLTAR" action="voltaParaIndex"/></button>
-            <button type="button" class="btn btn-light"><h:commandLink value="CADASTRAR" style="width: 95%" action="#{vendedorController.prepararInclusao()}" /></button>
+            <button type="button" class="btn btn-light"><h:commandLink value="CADASTRAR" style="width: 95%" action="#{cidadeController.prepararInclusao()}" /></button>
             </br>
         </h:form>
         </center>

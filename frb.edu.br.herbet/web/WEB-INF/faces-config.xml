@@ -10,8 +10,8 @@
             <to-view-id>/PaisListagem.xhtml</to-view-id>
         </navigation-case>
         <navigation-case>
-            <from-outcome>vaiParaVendedor</from-outcome>
-            <to-view-id>/VendedorListagem.xhtml</to-view-id>
+            <from-outcome>vaiParaCidade</from-outcome>
+            <to-view-id>/CidadeListagem.xhtml</to-view-id>
         </navigation-case>
         <navigation-case>
             <from-outcome>vaiParaVendasListagem</from-outcome>
@@ -72,52 +72,52 @@
         </navigation-case>
     </navigation-rule>
     <navigation-rule>
-        <from-view-id>/VendedorListagem.xhtml</from-view-id>
+        <from-view-id>/CidadeListagem.xhtml</from-view-id>
         <navigation-case>
             <from-outcome>voltaParaIndex</from-outcome>
             <to-view-id>/index.xhtml</to-view-id>
         </navigation-case>
         <navigation-case>
-            <from-outcome>vaiParaVendedorIncluir</from-outcome>
-            <to-view-id>/VendedorIncluir.xhtml</to-view-id>
+            <from-outcome>vaiParaCidadeIncluir</from-outcome>
+            <to-view-id>/CidadeIncluir.xhtml</to-view-id>
         </navigation-case>
         <navigation-case>
-            <from-outcome>vaiParaVendedorDetalhe</from-outcome>
-            <to-view-id>/VendedorDetalhe.xhtml</to-view-id>
+            <from-outcome>vaiParaCidadeDetalhe</from-outcome>
+            <to-view-id>/CidadeDetalhe.xhtml</to-view-id>
         </navigation-case>
         <navigation-case>
-            <from-outcome>vaiParaVendedorEditar</from-outcome>
-            <to-view-id>/VendedorEditar.xhtml</to-view-id>
+            <from-outcome>vaiParaCidadeEditar</from-outcome>
+            <to-view-id>/CidadeEditar.xhtml</to-view-id>
         </navigation-case>
     </navigation-rule>
     <managed-bean>
-        <managed-bean-name>vendedorController</managed-bean-name>
-        <managed-bean-class>frb.edu.br.controladores.VendedorController</managed-bean-class>
+        <managed-bean-name>cidadeController</managed-bean-name>
+        <managed-bean-class>frb.edu.br.controladores.CidadeController</managed-bean-class>
         <managed-bean-scope>session</managed-bean-scope>
     </managed-bean>
     <navigation-rule>
-        <from-view-id>/VendedorIncluir.xhtml</from-view-id>
+        <from-view-id>/CidadeIncluir.xhtml</from-view-id>
         <navigation-case>
-            <from-outcome>voltaParaVendedorListagem</from-outcome>
-            <to-view-id>/VendedorListagem.xhtml</to-view-id>
+            <from-outcome>voltaParaCidadeListagem</from-outcome>
+            <to-view-id>/CidadeListagem.xhtml</to-view-id>
         </navigation-case>
     </navigation-rule>
     <navigation-rule>
-        <from-view-id>/VendedorDetalhe.xhtml</from-view-id>
+        <from-view-id>/CidadeDetalhe.xhtml</from-view-id>
         <navigation-case>
-            <from-outcome>voltaParaVendedorListagem</from-outcome>
-            <to-view-id>/VendedorListagem.xhtml</to-view-id>
+            <from-outcome>voltaParaCidadeListagem</from-outcome>
+            <to-view-id>/CidadeListagem.xhtml</to-view-id>
         </navigation-case>
     </navigation-rule>
     <navigation-rule>
-        <from-view-id>/VendedorEditar.xhtml</from-view-id>
+        <from-view-id>/CidadeEditar.xhtml</from-view-id>
         <navigation-case>
-            <from-outcome>voltaParaVendedorListagem</from-outcome>
-            <to-view-id>/VendedorListagem.xhtml</to-view-id>
+            <from-outcome>voltaParaCidadeListagem</from-outcome>
+            <to-view-id>/CidadeListagem.xhtml</to-view-id>
         </navigation-case>
     </navigation-rule>
     <managed-bean>
-        <managed-bean-name>vendasController</managed-bean-name>
+        <managed-bean-name>VendasController</managed-bean-name>
         <managed-bean-class>frb.edu.br.controladores.VendasController</managed-bean-class>
         <managed-bean-scope>session</managed-bean-scope>
     </managed-bean>

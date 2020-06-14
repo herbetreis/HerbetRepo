@@ -6,7 +6,6 @@ import java.util.Date;
 public class PaisDto {
     private int idpais;
     private String nome;
-    private String descricao;
 
     public PaisDto() {
     }
@@ -34,14 +33,5 @@ public class PaisDto {
 
     public void setNome(String nome) {
         this.nome = nome;
-    }
-
-    public String getDescricao() {
-        return descricao;
-    }
-
-    public void setDescricao(String descricao) {
-        this.descricao = descricao;
-    }
-    
+    }    
 }

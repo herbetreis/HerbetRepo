@@ -12,44 +12,29 @@
             }
         </style>
         
-        <title>Edição de Produtos</title>
+        <title>EDITAR PAÍS</title>
     </h:head>
     <h:body>
         <center>
         <h:form>
             <div class="container p-3 my-3 bg-dark text-white">
-            <h1>EDIÇÃO DO PRODUTO</h1>
+            <h1>EDITAR PAÍS</h1>
             </div>
             <table>
-                <tbody width="1140px"   >
+                <tbody width="684px;">
                     <tr>
                         <td> <h:outputLabel value="CÓDIGO⠀"/> </td>
-                        <td> <h:outputLabel value="#{produtoController.produto.idproduto}"/> </td>
+                        <td> <h:outputLabel value="#{paisController.pais.idpais}"/> </td>
                     </tr>
                     <tr>
                         <td> <h:outputLabel value="NOME⠀"/> </td>
-                        <td> <h:inputText value="#{produtoController.produto.nome}" maxlength="240" size="80" />  </td>
-                    </tr>
-                    <tr>
-                        <td> <h:outputLabel value="PREÇO⠀"/> </td>
-                        <td> <h:inputText value="#{produtoController.produto.preco}" maxlength="240" size="80" /> </td>
-                    </tr>
-                    <tr>
-                        <td> <h:outputLabel value="VALIDADE⠀"/> </td>
-                        <td> <h:inputText value="#{produtoController.produto.validade}" maxlength="240" size="80">
-                                <f:convertDateTime pattern="dd/MM/yyyy" />
-                            </h:inputText> 
-                        </td>
-                    </tr>
-                    <tr>
-                        <td> <h:outputLabel value="DESCRIÇÃO⠀" /> </td>
-                        <td> <h:inputText value="#{produtoController.produto.descricao}" maxlength="240" size="80" /> </td>
+                        <td> <h:inputText value="#{paisController.pais.nome}" maxlength="240" size="80" />  </td>
                     </tr>
                 </tbody>
             </table>
             <br/>
             <button type="button" class="btn btn-light"><h:commandLink value="VOLTAR" style="width: 48%" action="voltaParaListagem" /></button>
-            <button type="button" class="btn btn-light"><h:commandLink value="GRAVAR" style="width: 48%" action="#{produtoController.finalizaEdicao()}" /></button>
+            <button type="button" class="btn btn-light"><h:commandLink value="GRAVAR" style="width: 48%" action="#{paisController.finalizaEdicao()}" /></button>
             
         </h:form>
         </center>

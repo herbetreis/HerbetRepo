@@ -12,7 +12,7 @@
             }
         </style>
         
-        <title>Detalhe de produto</title>
+        <title>DETALHE DE PAÍS</title>
         
     </h:head>
     <h:body>
@@ -20,33 +20,18 @@
         <h:form>
             <div class="container p-3 my-3 bg-dark text-white">
                 
-            <h1>DETALHE DE UM PRODUTO</h1>
+            <h1>DETALHE DE PAÍS</h1>
             </div>
-            <table width="1140px"
+            <table width="684px;"
                    border="2">
                 <tbody>
                     <tr>
                         <td> <h:outputLabel value="CÓDIGO"/> </td>
-                        <td> <h:outputLabel value="#{produtoController.produto.idproduto}"/> </td>
+                        <td> <h:outputLabel value="#{paisController.pais.idpais}"/> </td>
                     </tr>
                     <tr>
                         <td> <h:outputLabel value="NOME"/> </td>
-                        <td> <h:outputLabel value="#{produtoController.produto.nome}"/>  </td>
-                    </tr>
-                    <tr>
-                        <td> <h:outputLabel value="PREÇO"/> </td>
-                        <td> <h:outputLabel value="#{produtoController.produto.preco}" /> </td>
-                    </tr>
-                    <tr>
-                        <td> <h:outputLabel value="VALIDADE"/> </td>
-                        <td> <h:outputLabel value="#{produtoController.produto.validade}">
-                                <f:convertDateTime pattern="dd/MM/yyyy" />
-                            </h:outputLabel> 
-                        </td>
-                    </tr>
-                    <tr>
-                        <td> <h:outputLabel value="DESCRIÇÃO" /> </td>
-                        <td> <h:outputLabel value="#{produtoController.produto.descricao}" /> </td>
+                        <td> <h:outputLabel value="#{paisController.pais.nome}"/>  </td>
                     </tr>
                 </tbody>
             </table>
