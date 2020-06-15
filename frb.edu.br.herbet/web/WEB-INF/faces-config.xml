@@ -14,8 +14,12 @@
             <to-view-id>/CidadeListagem.xhtml</to-view-id>
         </navigation-case>
         <navigation-case>
-            <from-outcome>vaiParaVendasListagem</from-outcome>
-            <to-view-id>/VendasListagem.xhtml</to-view-id>
+            <from-outcome>vaiParaCidadeListagem</from-outcome>
+            <to-view-id>/CidadeListagem.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>vaiParaEnderecoListagem</from-outcome>
+            <to-view-id>/EnderecoListagem.xhtml</to-view-id>
         </navigation-case>
     </navigation-rule>
     <navigation-rule>
@@ -117,26 +121,26 @@
         </navigation-case>
     </navigation-rule>
     <managed-bean>
-        <managed-bean-name>VendasController</managed-bean-name>
-        <managed-bean-class>frb.edu.br.controladores.VendasController</managed-bean-class>
+        <managed-bean-name>EnderecoController</managed-bean-name>
+        <managed-bean-class>frb.edu.br.controladores.EnderecoController</managed-bean-class>
         <managed-bean-scope>session</managed-bean-scope>
     </managed-bean>
     <navigation-rule>
-        <from-view-id>/VendasListagem.xhtml</from-view-id>
+        <from-view-id>EnderecoListagem.xhtml</from-view-id>
         <navigation-case>
             <from-outcome>voltaParaIndex</from-outcome>
             <to-view-id>/index.xhtml</to-view-id>
         </navigation-case>
         <navigation-case>
-            <from-outcome>vaiParaVendasIncluir</from-outcome>
-            <to-view-id>/VendasIncluir.xhtml</to-view-id>
+            <from-outcome>vaiParaEnderecoIncluir</from-outcome>
+            <to-view-id>/EnderecoIncluir.xhtml</to-view-id>
         </navigation-case>
     </navigation-rule>
     <navigation-rule>
-        <from-view-id>/VendasIncluir.xhtml</from-view-id>
+        <from-view-id>/EnderecoIncluir.xhtml</from-view-id>
         <navigation-case>
-            <from-outcome>voltaParaVendasListagem</from-outcome>
-            <to-view-id>/VendasListagem.xhtml</to-view-id>
+            <from-outcome>voltaParaEnderecoListagem</from-outcome>
+            <to-view-id>/EnderecoListagem.xhtml</to-view-id>
         </navigation-case>
     </navigation-rule>
 </faces-config>

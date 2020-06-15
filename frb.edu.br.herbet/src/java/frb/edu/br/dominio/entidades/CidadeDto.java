@@ -1,6 +1,5 @@
-package frb.edu.br.dominio.entidades;
 
-import frb.edu.br.dominio.entidades.PaisDto;
+package frb.edu.br.dominio.entidades;
 
 public class CidadeDto {
     private int idcidade;
@@ -8,19 +7,24 @@ public class CidadeDto {
     private PaisDto pais;
 
     public CidadeDto() {
-        pais = new PaisDto();
-        //endereco = new EnderecoDto();
+        pais = new PaisDto ();
     }
+    
+    
 
-    public CidadeDto(int idcidade, String nome,PaisDto pais) {
+    public CidadeDto(int idcidade, String nome, PaisDto pais) {
         this.idcidade = idcidade;
-        this.pais = pais;
         this.nome = nome;
+        this.pais = pais;
     }
 
     public CidadeDto(int idcidade) {
         this.idcidade = idcidade;
-        pais = new PaisDto();
+         pais = new PaisDto ();
+    }
+
+    public CidadeDto(int aInt, String string) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     public int getIdcidade() {
@@ -42,10 +46,11 @@ public class CidadeDto {
     public PaisDto getPais() {
         return pais;
     }
-    
+
     public void setPais(PaisDto pais) {
         this.pais = pais;
     }
+            
 
-
+    
 }

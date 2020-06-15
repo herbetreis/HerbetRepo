@@ -2,19 +2,19 @@
 <Scene Scope="Project" version="2">
     <Scope Scope="Faces Configuration Only"/>
     <Scope Scope="Project">
-        <Node id="index.xhtml" x="400" y="150" zoom="true"/>
-        <Node id="PaisEditar.xhtml" x="900" y="300" zoom="true"/>
-        <Node id="PaisIncluir.xhtml" x="150" y="150" zoom="true"/>
-        <Node id="VendasListagem.xhtml" x="691" y="300" zoom="true"/>
-        <Node id="CidadeListagem.xhtml" x="400" y="300" zoom="true"/>
-        <Node id="VendedorDetalhe.xhtml" x="404" y="526" zoom="true"/>
-        <Node id="CidadeIncluir.xhtml" x="650" y="150" zoom="true"/>
-        <Node id="VendasIncluir.xhtml" x="150" y="450" zoom="true"/>
-        <Node id="VendedorEditar.xhtml" x="666" y="527" zoom="true"/>
+        <Node id="index.xhtml" x="427" y="152" zoom="true"/>
+        <Node id="PaisEditar.xhtml" x="1311" y="310" zoom="true"/>
+        <Node id="PaisIncluir.xhtml" x="-77" y="154" zoom="true"/>
+        <Node id="CidadeListagem.xhtml" x="927" y="517" zoom="true"/>
+        <Node id="EnderecoDetalhe.xhtml" x="150" y="150" zoom="true"/>
+        <Node id="EnderecoListagem.xhtml" x="385" y="513" zoom="true"/>
+        <Node id="CidadeIncluir.xhtml" x="706" y="147" zoom="true"/>
+        <Node id="EnderecoIncluir.xhtml" x="656" y="335" zoom="true"/>
+        <Node id="EnderecoEditar.xhtml" x="650" y="150" zoom="true"/>
         <Node id="CidadeDetalhe.xhtml" x="150" y="600" zoom="true"/>
-        <Node id="PaisDetalhe.xhtml" x="150" y="300" zoom="true"/>
-        <Node id="CidadeEditar.xhtml" x="1150" y="150" zoom="true"/>
-        <Node id="PaisListagem.xhtml" x="900" y="150" zoom="true"/>
+        <Node id="PaisDetalhe.xhtml" x="25" y="292" zoom="true"/>
+        <Node id="CidadeEditar.xhtml" x="1304" y="150" zoom="true"/>
+        <Node id="PaisListagem.xhtml" x="1011" y="142" zoom="true"/>
     </Scope>
     <Scope Scope="All Faces Configurations"/>
 </Scene>

@@ -6,53 +6,48 @@ import java.util.List;
 import frb.edu.br.dominio.contratos.ICidade;
 
 public class CidadeController {
+    private ICidade cidadeDao = new CidadeRepositorio();
 
-    private CidadeDto cidade;
+    private CidadeDto cidad;
     private List<CidadeDto> cidades = null;
-    
-    private ICidade cidadeRepositorio = new CidadeRepositorio();
-    
+
     public CidadeController() {
     }
 
-    public CidadeDto getCidade() {
-        return cidade;
+    public CidadeDto getCidad() {
+        return cidad;
     }
 
-    public void setCidade(CidadeDto cidade) {
-        this.cidade = cidade;
+    public void setCidad(CidadeDto cidad) {
+        this.cidad = cidad;
     }
 
     public List<CidadeDto> getCidades() {
-        if (cidades == null){
-            cidades = cidadeRepositorio.getListaTodos();
+        if(cidades == null){
+            cidades = cidadeDao.getListaTodos();
         }
         return cidades;
     }
-    
-    public String prepararInclusao(){
-        cidade = new CidadeDto();
+    public String preparaInclusao(){
+        cidad = new CidadeDto();
         return "vaiParaCidadeIncluir";
     }
     
     public String finalizaInclusao(){
-        cidadeRepositorio.incluir(cidade);
-        cidades = null;
+        cidadeDao.incluir(cidad);
         return "voltaParaCidadeListagem";
     }
     
     public String finalizaEdicao(){
-        cidadeRepositorio.alterar(cidade);
-        cidades= null;
-        return "voltaParaCidadeListagem";
+        cidadeDao.alterar(cidad);
+        cidades = null;
+        return "voltaParaListagem";
     }
     
     public String finalizaDelecao(){
-        cidadeRepositorio.deletar(cidade.getIdcidade() );
+        cidadeDao.deletar(cidad.getIdcidade());
         cidades = null;
-        return null;
+        return "refresh";
     }
-    
-    
     
 }

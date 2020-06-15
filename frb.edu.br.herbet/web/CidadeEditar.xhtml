@@ -12,33 +12,29 @@
             }
         </style>
         
-        <title>VENDEDOR EDITAR</title>
+        <title>EDITAR CIDADE</title>
     </h:head>
     <h:body>
         <center>
         <h:form>
             <div class="container p-3 my-3 bg-dark text-white">
-            <h1>VENDEDOR EDITAR</h1>
+            <h1>EDITAR CIDADE</h1>
             </div>
             <table>
-                <tbody>
+                <tbody width="684px;">
                     <tr>
-                        <td> <h:outputLabel value="MATRICULA⠀"/> </td>
-                        <td> <h:outputLabel value="#{vendedorController.vendedor.idvendedor}"/> </td>
+                        <td> <h:outputLabel value="CÓDIGO⠀"/> </td>
+                        <td> <h:outputLabel value="#{cidadeController.cidad.idcidade}"/> </td>
                     </tr>
                     <tr>
                         <td> <h:outputLabel value="NOME⠀"/> </td>
-                        <td> <h:inputText value="#{vendedorController.vendedor.nome}" maxlength="240" size="80" />  </td>
-                    </tr>
-                    <tr>
-                        <td> <h:outputLabel value="COMISSÃO⠀"/> </td>
-                        <td> <h:inputText value="#{vendedorController.vendedor.comissao}" maxlength="240" size="80" /> </td>
+                        <td> <h:inputText value="#{cidadeController.cidad.nome}" maxlength="240" size="80" />  </td>
                     </tr>
                 </tbody>
             </table>
             <br/>
-            <button type="button" class="btn btn-light"><h:commandLink value="VOLTAR" style="width: 48%" action="voltaParaVendedorListagem" /></button>
-            <button type="button" class="btn btn-light"><h:commandLink value="GRAVAR" style="width: 48%" action="#{vendedorController.finalizaEdicao()}" /></button>
+            <button type="button" class="btn btn-light"><h:commandLink value="VOLTAR" style="width: 48%" action="voltaParaListagem" /></button>
+            <button type="button" class="btn btn-light"><h:commandLink value="GRAVAR" style="width: 48%" action="#{cidadeController.finalizaEdicao()}" /></button>
             
         </h:form>
         </center>

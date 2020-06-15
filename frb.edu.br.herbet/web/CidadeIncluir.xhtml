@@ -26,7 +26,7 @@
                         <td> <h:outputLabel value="PAIS⠀"/> </td>
                         <td>
                             <h:selectOneMenu id="cboPais"
-                                             value="#{paisController.pais.idpais}">
+                                             value="#{paisController.pais}">
                                 
                                 <f:selectItem itemLabel="Selecione um país"
                                               itemValue="-1"/>
@@ -40,12 +40,12 @@
                     </tr>
                     <tr>
                         <td> <h:outputLabel value="CIDADE⠀"/> </td>
-                        <td> <h:inputText value="#{cidadeController.cidade.nome}" maxlength="240" size="80" /> </td>
+                        <td> <h:inputText value="#{cidadeController.cidad.nome}" maxlength="240" size="80" /> </td>
                     </tr>                   
                 </tbody>
             </table>
             <br/>
-            <button type="button" class="btn btn-light"><h:commandLink value="VOLTAR" style="width: 48%" action="voltaParaCidadeListagem" /></button>
+            <button type="button" class="btn btn-light"><h:commandLink value="VOLTAR" style="width: 48%" action="voltaParaCidadeListagem"/></button>
             <button type="button" class="btn btn-light"><h:commandLink value="GRAVAR" style="width: 48%" action="#{cidadeController.finalizaInclusao()}"/></button>
             
         </h:form>

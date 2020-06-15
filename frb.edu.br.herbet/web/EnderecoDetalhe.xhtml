@@ -1,0 +1,66 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"/>
+        
+        <style>
+            table, th, td {
+            text-align:center;
+            }
+        </style>
+        
+        <title>DETALHE ENDEREÇO</title>
+        
+    </h:head>
+    <h:body>
+        <center>
+        <h:form>
+            <div class="container p-3 my-3 bg-dark text-white">
+                
+            <h1>DETALHE ENDEREÇO</h1>
+            </div>
+            <table width="684px;"
+                   border="2">
+                <tbody>
+                    <tr>
+                        <td> <h:outputLabel value="CÓDIGO"/> </td>
+                        <td> <h:outputLabel value="#{EnderecoController.endereco.idendereco}"/> </td>
+                    </tr>
+                    <tr>
+                        <td> <h:outputLabel value="ENDEREÇO"/> </td>
+                        <td> <h:outputLabel value="#{EnderecoController.endereco.endereco}"/>  </td>
+                    </tr>
+                    <tr>
+                        <td> <h:outputLabel value="ENDEREÇO2"/> </td>
+                        <td> <h:outputLabel value="#{EnderecoController.endereco.endereco2}"/>  </td>
+                    </tr>
+                    <tr>
+                        <td> <h:outputLabel value="BAIRRO"/> </td>
+                        <td> <h:outputLabel value="#{EnderecoController.endereco.bairro}"/>  </td>
+                    </tr>
+                    <tr>
+                        <td> <h:outputLabel value="CIDADE"/> </td>
+                        <td> <h:outputLabel value="#{EnderecoController.endereco.cidade}"/>  </td>
+                    </tr>
+                                        <tr>
+                        <td> <h:outputLabel value="CEP"/> </td>
+                        <td> <h:outputLabel value="#{EnderecoController.endereco.cep}"/>  </td>
+                    </tr>
+                    <tr>
+                        <td> <h:outputLabel value="TELEFONE"/> </td>
+                        <td> <h:outputLabel value="#{EnderecoController.endereco.telefone}"/>  </td>
+                    </tr>
+                </tbody>
+            </table>
+            <br/>
+            <button type="button" class="btn btn-light"><h:commandLink value="VOLTAR" style="width: 48%" action="voltaParaListagem" /></button>
+            <button type="button" class="btn btn-light"><h:commandLink value="GRAVAR" style="width: 48%" action="vaiParaEditar"/></button>                             
+            
+        </h:form>
+        </center>
+    </h:body>
+</html>
+

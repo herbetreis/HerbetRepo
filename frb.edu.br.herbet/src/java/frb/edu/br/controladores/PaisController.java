@@ -1,4 +1,3 @@
-
 package frb.edu.br.controladores;
 
 import frb.edu.br.dominio.entidades.PaisDto;
@@ -6,12 +5,13 @@ import frb.edu.br.infra.repositorios.PaisRepositorio;
 import java.util.List;
 import frb.edu.br.dominio.contratos.IPais;
 
+
 public class PaisController {
-    
     private PaisDto pais;
     private List<PaisDto> paises = null;
     
     private IPais paisRepositorio = new PaisRepositorio();
+
 
     public PaisController() {
     }
@@ -50,7 +50,7 @@ public class PaisController {
     }
     
     public String finalizaDelecao(){
-        paisRepositorio.deletar( pais.getIdpais() );
+        paisRepositorio.deletar(pais.getIdpais());
         paises = null;
         return "refresh";
     }

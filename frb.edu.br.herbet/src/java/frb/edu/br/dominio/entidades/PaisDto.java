@@ -1,7 +1,5 @@
 package frb.edu.br.dominio.entidades;
 
-import java.util.Date;
-
 
 public class PaisDto {
     private int idpais;
@@ -33,5 +31,6 @@ public class PaisDto {
 
     public void setNome(String nome) {
         this.nome = nome;
-    }    
+    }
+    
 }

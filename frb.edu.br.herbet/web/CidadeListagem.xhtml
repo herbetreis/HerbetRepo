@@ -5,7 +5,7 @@
       xmlns:f="http://xmlns.jcp.org/jsf/core">
     <h:head>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"/>
-        <title>LISTA DE CIDADES</title>
+        <title>CIDADES CADASTRADAS</title>
     </h:head>
     <h:body>
         <center>
@@ -15,7 +15,7 @@
             </div>
             
             <h:dataTable style="text-align: center;" width="1140px;"
-                         var="umCid"
+                         var="um"
                          value="#{cidadeController.cidades}"
                          border="2">
                 
@@ -24,15 +24,15 @@
                          <h:outputLabel value="CODIGO"/>
                     </f:facet>
                     
-                    <h:outputLabel value="#{umCid.idcidade}"/>                    
+                    <h:outputLabel value="#{um.idcidade}"/>                    
                 </h:column>
                 
                 <h:column>
                     <f:facet name="header">
-                        <h:outputLabel value="NOME"/>
+                        <h:outputLabel value="CIDADE"/>
                     </f:facet>
                     
-                    <h:outputLabel value="#{umCid.nome}"/>                    
+                    <h:outputLabel value="#{um.idcidade}"/>                    
                 </h:column>
                 
                 <h:column>
@@ -40,26 +40,26 @@
                         <h:outputLabel value="AÇÃO"/>
                     </f:facet>
                     
-                    <h:commandLink value="Detalhe" action="vaiParaCidadeDetalhe">
-                        <f:setPropertyActionListener target="#{cidadeController.cidade}" value="#{umCid}" />
+                    <h:commandLink value="Detalhe" action="vaiParaVendedorDetalhe">
+                        <f:setPropertyActionListener target="#{vendedorController.vendedor}" value="#{umVend}" />
                     </h:commandLink>
                     
                     <h:outputLabel value="⠀|⠀"/>
-                    <h:commandLink value="Editar" action="vaiParaCidadeEditar">
-                        <f:setPropertyActionListener target="#{cidadeController.cidade}" value="#{umCid}" />
+                    <h:commandLink value="Editar" action="vaiParaVendedorEditar">
+                        <f:setPropertyActionListener target="#{vendedorController.vendedor}" value="#{umVend}" />
                     </h:commandLink>
                     
                     
                     <h:outputLabel value="⠀|⠀"/>
                     
-                    <h:commandLink value="Deletar" action="#{cidadeController.finalizaDelecao()}">
-                        <f:setPropertyActionListener target="#{cidadeController.cidade}" value="#{umCid}"/>
+                    <h:commandLink value="Deletar" action="#{vendedorController.finalizaDelecao()}">
+                        <f:setPropertyActionListener target="#{vendedorController.vendedor}" value="#{umVend}"/>
                     </h:commandLink>
                 </h:column>
             </h:dataTable>
             <br>
             <button type="button" class="btn btn-light"><h:commandLink value="VOLTAR" action="voltaParaIndex"/></button>
-            <button type="button" class="btn btn-light"><h:commandLink value="CADASTRAR" style="width: 95%" action="#{cidadeController.prepararInclusao()}" /></button>
+            <button type="button" class="btn btn-light"><h:commandLink value="CADASTRAR" style="width: 95%" action="#{cidadeController.preparaInclusao()}" /></button>
             </br>
         </h:form>
         </center>
